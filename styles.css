@@ -213,3 +213,52 @@ p{
     }
         
 }
+
+.cambiar {
+	position: absolute;
+	height: 12px;
+	width: 12px;
+	top: 0;
+	right: 0;
+	animation: appear 2s ease-in-out 1.2s forwards;
+	background: #ddd;
+	
+	& a {
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+		background: #fff6f2;
+		text-decoration: none;
+		color: #B03052;
+		font-weight: bold;
+
+		&::after {
+			content: "Ver Wendy";
+			display: block;
+			transform: translate(-25%, -25%) rotate(45deg);
+			height: 144px;
+			width: 144px;
+			animation: appear-text 1s ease-in-out 2s forwards;
+			font-size: 18px;
+		}
+	}
+}
+
+@keyframes appear {
+	to {
+		height: 144px;
+		width: 144px;
+		box-shadow: #aaaa 12px 12px 2px;
+	}
+}
+
+@keyframes appear-text {
+	to {
+		transform: translate(-40%, 40%) rotate(45deg);
+		text-align: center;
+	}
+}

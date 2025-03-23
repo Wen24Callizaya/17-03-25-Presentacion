@@ -7,3 +7,12 @@
     --color-subrrayado: #D76C82;
     --color-border: #94d175;
 }
+
+.cambiar a {
+	background: #efebdf;
+}
+
+.cambiar a::after {
+	color: #155E95;
+	content:"Ver Walter";
+}
